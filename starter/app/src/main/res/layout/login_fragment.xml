@@ -1,59 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center"
+    android:orientation="vertical"
     tools:context=".ui.LoginFragment">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+        android:layout_margin="@dimen/default_margin"
+        android:gravity="center"
         android:text="@string/login"
-        android:layout_margin="@dimen/default_margin"/>
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4" />
 
     <TextView
         android:id="@+id/username_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
         android:layout_marginHorizontal="@dimen/default_margin"
-        android:text="@string/username" />
+        android:text="@string/username"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
 
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
+        android:id="@+id/username_text"
         android:layout_width="match_parent"
         android:layout_height="@dimen/default_text_height"
-        android:layout_marginHorizontal="@dimen/default_margin">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/username_text"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="@string/username"
-            />
-    </com.google.android.material.textfield.TextInputLayout>
+        android:layout_marginHorizontal="@dimen/default_margin"
+        android:hint="@string/username" />
 
     <TextView
         android:id="@+id/password_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
         android:text="@string/password"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-        android:layout_marginHorizontal="@dimen/default_margin"
-        android:layout_marginTop="@dimen/default_margin" />
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_marginHorizontal="@dimen/default_margin"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+
+    <EditText
+        android:id="@+id/password_text"
         android:layout_width="match_parent"
-        android:layout_height="48dp" >
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/password_text"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="@string/password" />
-    </com.google.android.material.textfield.TextInputLayout>
+        android:layout_height="@dimen/default_text_height"
+        android:layout_marginHorizontal="@dimen/default_margin"
+        android:hint="@string/password" />
 
 
     <Button
@@ -61,12 +52,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/default_margin"
-        android:text="@string/login"/>
+        android:text="@string/login" />
 
     <Button
         android:id="@+id/new_user_button"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:textSize="18sp"
         android:layout_width="200dp"
         android:layout_height="48dp"
-        android:text="@string/create_new_user"
-        style="@style/Widget.MaterialComponents.Button.TextButton"/>
+        android:text="@string/create_new_user" />
 </LinearLayout>
