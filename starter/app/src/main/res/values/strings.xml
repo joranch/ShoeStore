@@ -4,8 +4,6 @@
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="create_new_user">Create new user</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="store_name">My Shoe Store Name</string>
     <string name="welcome_text">Hi User, welcome to this amazing shoe store</string>
     <string name="continue_text">Continue</string>
