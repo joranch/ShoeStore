@@ -1,12 +1,27 @@
 <resources>
-    <string name="app_name">ShoeStore</string>
+    <string name="app_name">Shoe Store Inventory</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
+    <string name="welcome_title">Welcome</string>
+    <string name="instruction_title">Instructions</string>
+    <string name="details_title">Details</string>
     <string name="create_new_user">Create new user</string>
     <string name="welcome_text">Hi, welcome to this amazing shoe store app!</string>
     <string name="continue_text">Continue</string>
-    <string name="instruction_title">Welcome, and thank you for using this app!</string>
+    <string name="instruction_subtitle">Welcome, and thank you for using this app!</string>
     <string name="instruction_text">Here you will be able to manage everything you need for your shoe store. You can check what\'s available and even add new shoes!</string>
     <string name="add_new_shoe_button_description">Add new shoe button</string>
+    <string name="name">Name</string>
+    <string name="name_hint">Enter name</string>
+    <string name="company">Company</string>
+    <string name="company_hint">Enter company</string>
+    <string name="size">Size</string>
+    <string name="size_hint">Enter shoe size</string>
+    <string name="description">Description</string>
+    <string name="description_hint">Enter description</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="new_shoe_error">Your new shoe is missing information</string>
+
 </resources>

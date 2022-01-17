@@ -1,18 +1,15 @@
 package com.udacity.shoestore.ui
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.TextView
+import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
 import com.udacity.shoestore.databinding.ItemListShoeBinding
 import com.udacity.shoestore.models.Shoe
 import com.udacity.shoestore.viewmodels.ShoeStoreViewModel
-import kotlinx.android.synthetic.main.item_list_shoe.view.*
 
 class ShoeListFragment : Fragment() {
     private val viewModel by activityViewModels<ShoeStoreViewModel>()
@@ -25,7 +22,7 @@ class ShoeListFragment : Fragment() {
     ): View? {
         _binding = FragmentShoeListBinding.inflate(inflater, container, false)
         val view = binding.root
-
+        setHasOptionsMenu(true)
         return view
     }
 
@@ -43,6 +40,22 @@ class ShoeListFragment : Fragment() {
 
         binding.addNewButton.setOnClickListener {
             findNavController().navigate(ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailFragment())
+        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.logout_button -> {
+                viewModel.userLogOut()
+                findNavController().navigate(ShoeListFragmentDirections.actionShoeListFragmentToLoginFragment())
+                return true
+            }
+            else -> super.onOptionsItemSelected(item)
         }
     }
 

@@ -15,20 +15,21 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Timber.plant(Timber.DebugTree())
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        Timber.plant(Timber.DebugTree())
         val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
 
         setSupportActionBar(binding.toolbar)
         setupActionBarWithNavController(this, navController)
+
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        return  navController.navigateUp()
+        return navController.navigateUp()
                 || super.onSupportNavigateUp()
     }
 }
