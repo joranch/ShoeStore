@@ -30,7 +30,10 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.loginButton.setOnClickListener {
-            if(viewModel.authenticateUser()){
+            if(viewModel.isAuthenticated){
+                findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToShoeListFragment())
+            }
+            else if (viewModel.authenticateUser()){
                 findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
             }
         }

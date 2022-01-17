@@ -15,6 +15,8 @@ class ShoeStoreViewModel : ViewModel() {
     )
 
     private var userLoggedIn = false
+    val isAuthenticated get() = userLoggedIn
+
     private val _shoeList = MutableLiveData<MutableList<Shoe>>(defaultShoes)
     val shoeList: LiveData<MutableList<Shoe>> = _shoeList
 

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI.setupActionBarWithNavController
 import com.udacity.shoestore.databinding.ActivityMainBinding
 import timber.log.Timber
@@ -23,8 +24,12 @@ class MainActivity : AppCompatActivity() {
             .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
 
+
         setSupportActionBar(binding.toolbar)
-        setupActionBarWithNavController(this, navController)
+        val appBarConfiguration = AppBarConfiguration
+            .Builder(R.id.loginFragment, R.id.shoeListFragment)
+            .build()
+        setupActionBarWithNavController(this, navController,appBarConfiguration)
 
     }
 
